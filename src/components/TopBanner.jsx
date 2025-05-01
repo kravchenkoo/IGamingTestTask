@@ -32,7 +32,7 @@ function TopBanner() {
   useGSAP(() => {
     gsap.from('.cloud1', { left: '-100%', duration: 3 });
     gsap.from('.header', { top: '-100%', duration: 2 });
-    gsap.from('.bgimg', { marginBottom: '100%', duration: 1 });
+    gsap.from('.bgimg', { marginBottom: '100%', opacity: 0, duration: 1 });
     gsap.from('.cloud2', {
       top: '-100%',
       duration: 3,
