@@ -21,9 +21,10 @@ const StyledUl = styled.ul`
   padding: 0;
   gap: 30px;
   font-weight: 500;
-  color: #fff;
   font-size: 1.6rem;
   li {
+    color: #ffffff;
+    transition: color 0.3s ease;
     cursor: pointer;
     &:hover {
       color: #72ebf9;
@@ -35,14 +36,21 @@ const StyledButtons = styled.div`
   display: flex;
   gap: 5px;
   margin-left: 40px;
-  color: #fff;
   button {
     padding: 9px 30px 12px;
     background-color: transparent;
     border: none;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+      color: #72ebf9;
+    }
     &.signup {
       border: 1px solid #fff;
       border-radius: 3px;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
     }
   }
 `;
