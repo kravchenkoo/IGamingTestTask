@@ -30,6 +30,7 @@ function TopBanner() {
   const bannerBlock = useRef(null);
   const [isAnimationRunning, setIsAnimationRunning] = useState(true);
   useGSAP(() => {
+    // elements apear animation
     gsap.from('.cloud1', { left: '-100%', duration: 3 });
     gsap.from('.header', { top: '-100%', duration: 2 });
     gsap.from('.bgimg', { marginBottom: '100%', opacity: 0, duration: 1 });
@@ -57,7 +58,6 @@ function TopBanner() {
     });
   });
   useEffect(() => {
-    console.log(`isAnimationRunning: ${isAnimationRunning}`);
     if (!isAnimationRunning) {
       let xValue = 0;
       let yValue = 0;
@@ -66,7 +66,16 @@ function TopBanner() {
 
       bannerBlock.current.addEventListener('mousemove', (e) => {
         xValue = e.clientX - window.innerWidth / 2;
-        yValue = e.clientY - window.innerHeight / 2;
+        yValue = e.clientY - bannerBlock.current.offsetHeight / 2;
+
+        // 3d rotation for cards
+        let rotateDegreeX =
+          (yValue / (bannerBlock.current.offsetHeight / 2)) * 20;
+        let rotateDegreeY = (xValue / (window.innerWidth / 2)) * 20;
+        const cardsEl = document.querySelector('.cards');
+        cardsEl.style.transform = `translateX(-10px) rotateX(${rotateDegreeX}deg) rotateY(${rotateDegreeY}deg)`;
+
+        // parallax for bg circles
         parallaxElements.forEach((el) => {
           let speedx = el.dataset.speedx;
           let speedy = el.dataset.speedy;

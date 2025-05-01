@@ -163,7 +163,7 @@ function Circles() {
         $widthHeight={'15px'}
         $color="#72EBF9"
         $position={{ top: '91%', left: '80%' }}
-        data-speedx="0.95"
+        data-speedx="0.25"
         data-speedy="0.2"
         data-speedz="0.38"
       />
