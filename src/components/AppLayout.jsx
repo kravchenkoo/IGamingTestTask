@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import TopBanner from './TopBanner';
-import Header from './header';
+import Header from './Header';
 
 const StyledAppLayout = styled.div``;
 
