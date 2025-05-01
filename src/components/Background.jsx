@@ -1,4 +1,15 @@
 import styled from 'styled-components';
+
+const BgWrapper = styled.div`
+  background: linear-gradient(
+    135deg,
+    #b2f0f0 0%,
+    #c9e2ff 25%,
+    #d6ccff 50%,
+    #cbbcff 75%,
+    #a5c3ff 100%
+  );
+`;
 const Cloud1Wrapper = styled.div`
   position: absolute;
   top: 3%;
@@ -18,15 +29,8 @@ const Cloud2Wrapper = styled.div`
     }
   }
 `;
-const CloudImg2 = styled.img`
-  position: absolute;
-  top: 0%;
-  left: 10%;
-`;
 const StyledImg = styled.img`
   display: block;
-  top: 0%;
-  left: 0%;
   width: 100%;
   height: auto;
   z-index: 1;
@@ -42,10 +46,9 @@ function Background() {
         <img src="/topOfCloud2.svg" alt="Cloud" />
         <img src="/cloud2.svg" alt="Cloud" />
       </Cloud2Wrapper>
-      <div className="bgimg">
-        <StyledImg src="/bgtop.png" />
-        <StyledImg src="/bg.png" />
-      </div>
+      <BgWrapper className="bgimg">
+        <StyledImg src="/bg.JPEG" />
+      </BgWrapper>
     </>
   );
 }
