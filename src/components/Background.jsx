@@ -9,6 +9,7 @@ const BgWrapper = styled.div`
     #cbbcff 75%,
     #a5c3ff 100%
   );
+  min-height: 885px;
 `;
 const Cloud1Wrapper = styled.div`
   position: absolute;
