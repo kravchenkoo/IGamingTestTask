@@ -47,6 +47,6 @@ const Circle = styled.div`
   border-radius: 50%;
   top: ${(props) => props.$position.top};
   left: ${(props) => props.$position.left};
-  transition: transform 0.1s ease;
+  transition: transform 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
 `;
 export default Circle;

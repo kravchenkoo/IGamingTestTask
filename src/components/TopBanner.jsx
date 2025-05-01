@@ -6,6 +6,7 @@ import Background from './Background';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useEffect, useState } from 'react';
+import Header from './Header';
 
 const StyledTopBanner = styled.div`
   position: relative;
@@ -96,10 +97,20 @@ function TopBanner() {
           }px) translateZ(${zValue * speedz}px)`;
         });
       });
+      bannerBlock.current.addEventListener('mouseleave', () => {
+        // set initial position when mouse leave
+        const cardsEl = document.querySelector('.cards');
+        cardsEl.style.transform = `translateX(-10px) rotateX(0deg) rotateY(0deg)`;
+
+        parallaxElements.forEach((el) => {
+          el.style.transform = `translateX(0px) translateY(0px) translateZ(0px)`;
+        });
+      });
     }
   }, [isAnimationRunning]);
   return (
     <StyledTopBanner ref={bannerBlock}>
+      <Header />
       <Background />
       <StyledContainer>
         <BannerInfo />

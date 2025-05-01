@@ -12,7 +12,7 @@ const StyledCards = styled.div`
   height: 0;
   padding-bottom: 604px;
   perspective: 100px;
-  transition: transform 0.1s ease;
+  transition: transform 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
   .cardsbg-perspective {
     transform: translateX(-50%) translateY(-50%) translateZ(40px) rotateY(0deg);
   }

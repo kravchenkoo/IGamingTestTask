@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const BgWrapper = styled.div`
-position: relative
+  position: relative;
   background: linear-gradient(
     135deg,
     #b2f0f0 0%,
