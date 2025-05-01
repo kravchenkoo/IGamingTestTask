@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const BgWrapper = styled.div`
+position: relative
   background: linear-gradient(
     135deg,
     #b2f0f0 0%,
@@ -32,13 +33,19 @@ const Cloud2Wrapper = styled.div`
 `;
 const StyledImg = styled.img`
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  z-index: 1;
+  height: 100%;
+  transition: opacity 0.1s ease;
 `;
 function Background() {
   return (
     <>
+      <BgWrapper className="bgimg">
+        <StyledImg src="/bg.JPEG" />
+      </BgWrapper>
       <Cloud1Wrapper className="cloud1">
         <img src="/topOfCloud1.svg" alt="Cloud" />
         <img src="/cloud1.svg" alt="Cloud" />
@@ -47,9 +54,6 @@ function Background() {
         <img src="/topOfCloud2.svg" alt="Cloud" />
         <img src="/cloud2.svg" alt="Cloud" />
       </Cloud2Wrapper>
-      <BgWrapper className="bgimg">
-        <StyledImg src="/bg.JPEG" />
-      </BgWrapper>
     </>
   );
 }

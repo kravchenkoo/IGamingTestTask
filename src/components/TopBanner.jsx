@@ -33,7 +33,8 @@ function TopBanner() {
     // elements apear animation
     gsap.from('.cloud1', { left: '-100%', duration: 3 });
     gsap.from('.header', { top: '-100%', duration: 2 });
-    gsap.from('.bgimg', { marginBottom: '100%', opacity: 0, duration: 1 });
+    gsap.from('.bgimg', { marginBottom: '100%', duration: 1 });
+    gsap.from('.bgimg img', { opacity: 0, duration: 3 });
     gsap.from('.cloud2', {
       top: '-100%',
       duration: 3,
@@ -51,7 +52,7 @@ function TopBanner() {
         ease: 'elastic.inOut(1)',
       });
     gsap.from('.bannerinfo', {
-      marginLeft: '-200%',
+      marginLeft: '-300%',
       duration: 2,
       delay: 1,
       ease: 'elastic.inOut(1)',
